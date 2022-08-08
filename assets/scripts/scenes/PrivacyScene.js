@@ -94,7 +94,7 @@ class PrivacyScene extends Phaser.Scene {
 	createTextBlock() {
 		// this.graphics = this.make.graphics();
 		let graphics = this.add.graphics();
-		this.graphics.fillStyle(0xff0000);
+		graphics.fillStyle(0xff0000);
 		graphics.fillRect(this.config.x + 90, this.config.y + 20, config.width, config.height);
 		// this.graphics.fillRect(60, 60, 100, 100);
 
