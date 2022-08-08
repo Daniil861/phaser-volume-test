@@ -21,7 +21,7 @@ class PrivacyScene extends Phaser.Scene {
 
 	}
 	createTextBlock() {
-		this.content = [
+		let content = [
 			'PRIVACY POLICY',
 			'LAST MODIFIED 1 MARCH 2021',
 			'PRIVACY POLICY IS UPDATED IN ACCORDANCE WITH THE GENERAL DATA PROTECTION REGULATION (GDPR).',
@@ -101,7 +101,7 @@ class PrivacyScene extends Phaser.Scene {
 
 // 		let mask = new Phaser.Display.Masks.GeometryMask(this, graphics);
 
-		this.firstText = this.add.text(this.config.x + 90, this.config.y + 20, this.content, {
+		this.firstText = this.add.text(this.config.x + 90, this.config.y + 20, content, {
 			font: '26px Inter-bold',
 			color: '#fff',
 // 			wordWrap: { width: config.width - 250 }
