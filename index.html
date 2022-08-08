@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Game 2 - dragon</title>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+		}
+
+		canvas {
+			width: 100%;
+		}
+
+		@font-face {
+			font-family: 'washYourHand';
+			src: url('assets/fonts/washYourHand.ttf');
+		}
+
+		._font-preload {
+			font-family: 'washYourHand';
+			position: absolute;
+			top: -100%;
+			left: -100%;
+			opacity: 0;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="_font-preload">.</div>
+	<script src="./assets/scripts/libs/phaser.js"></script>
+	<script src="./assets/scripts/classes/LoadingBar.js"></script>
+	<script src="./assets/scripts/prefabs/Boom.js"></script>
+	<script src="./assets/scripts/prefabs/MovableObject.js"></script>
+	<script src="./assets/scripts/prefabs/Fires.js"></script>
+	<script src="./assets/scripts/prefabs/Fire.js"></script>
+	<script src="./assets/scripts/prefabs/Enemies.js"></script>
+	<script src="./assets/scripts/prefabs/Enemy.js"></script>
+	<script src="./assets/scripts/prefabs/Player.js"></script>
+	<script src="./assets/scripts/scenes/BootScene.js"></script>
+	<script src="./assets/scripts/scenes/PrivacyScene.js"></script>
+	<script src="./assets/scripts/scenes/PreloadScene.js"></script>
+	<script src="./assets/scripts/scenes/StartScene.js"></script>
+	<script src="./assets/scripts/scenes/GameScene.js"></script>
+
+	<script src="./assets/scripts/main.js"></script>
+</body>
+
+</html>
