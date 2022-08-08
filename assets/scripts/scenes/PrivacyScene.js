@@ -9,6 +9,18 @@ class PrivacyScene extends Phaser.Scene {
 	}
 	create() {
 		console.log('Загрузился PrivacyScene');
+		this.createBackground();
+		this.createTextBlock();
+		this.createButton();
+	}
+
+	createBackground() {
+		this.add.sprite(0, 0, 'bg').setOrigin(0);
+	}
+	createRect() {
+
+	}
+	createTextBlock() {
 		this.content = [
 			'PRIVACY POLICY',
 			'LAST MODIFIED 1 MARCH 2021',
@@ -75,23 +87,11 @@ class PrivacyScene extends Phaser.Scene {
 // 				`YOU MUST BE AT LEAST 18 YEARS OLD TO USE THE ${this.config.nameGame}. BY ACCEPTING THE TERMS OF THIS PRIVACY POLICY AND THE TERMS OF USE PRESENTED TO YOU BEFORE DOWNLOADING OR PRESENTING THE SOFTWARE AND WHILE USING IT, YOU REPRESENT THAT YOU ARE 18 YEARS OLD. WE WILL NOT KNOWINGLY COLLECT PERSONAL INFORMATION FROM A USER WHO IS YOUNGER THAN 18 YEARS OLD AND, IF WE HAVE REASON TO BELIEVE THAT YOU ARE YOUNGER THAN 18 YEARS OLD, WE WILL DELETE YOUR INFORMATION FROM OUR SERVERS.`
 // 			]
 		]
-		this.createBackground();
-		this.createTextBlock();
-		this.createButton();
-	}
-
-	createBackground() {
-		this.add.sprite(0, 0, 'bg').setOrigin(0);
-	}
-	createRect() {
-
-	}
-	createTextBlock() {
 		let txtCont = [
-			'1. QQQQQQQQQQQQQQQQQQQ QQQQQQQQQQQQQQQQQQQQQQQQQQQ',
+			'1. QQQQQQQQQQQQQQQQQQQ QQQQQQQQQQQQQQQQQQQQQQQQQQQ ${this.config.nameGame}',
 			`2. RRRRRRRRRRRRRRRRRRRRWEWWDD VDSDGSDGS              DDDDDDDDDDDDDDDDDDDDDDDDDD`,
 			'3. KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK',
-			`4. FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF`
+			`4. FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF ${this.config.nameGame}`
 		];
 		// this.graphics = this.make.graphics();
 		let graphics = this.add.graphics();
