@@ -115,11 +115,11 @@ class PrivacyScene extends Phaser.Scene {
 		// }
 // 		text.setMask(mask);
 
-		let zone = this.add.zone(this.config.x, this.config.y, config.width - 250, config.height)
-			.setOrigin(0)
-			.setInteractive();
+// 		let zone = this.add.zone(this.config.x, this.config.y, config.width - 250, config.height)
+// 			.setOrigin(0)
+// 			.setInteractive();
 
-		this.input.dragDistanceThreshold = 100;
+// 		this.input.dragDistanceThreshold = 100;
 
 // 		let y = this.config.y;
 
@@ -133,15 +133,15 @@ class PrivacyScene extends Phaser.Scene {
 		// 		zone.x = this.config.x;
 		// 		zone.y = this.config.y - 3;
 		// 	});
-		zone.on('pointermove', function (pointer) {
+// 		zone.on('pointermove', function (pointer) {
 
-			if (pointer.isDown) {
-				text.y += (pointer.velocity.y / 10);
+// 			if (pointer.isDown) {
+// 				text.y += (pointer.velocity.y / 10);
 
-				text.y = Phaser.Math.Clamp(text.y, -400, 300);
-			}
+// 				text.y = Phaser.Math.Clamp(text.y, -400, 300);
+// 			}
 
-		});
+// 		});
 	}
 	createButton() {
 		let btn = this.add.sprite(config.scale.width - 100, config.scale.height - 100, 'btn-preload').setInteractive();
