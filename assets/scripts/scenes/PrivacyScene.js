@@ -89,7 +89,7 @@ class PrivacyScene extends Phaser.Scene {
 	createTextBlock() {
 		let txtCont = [
 			'111111111111111',
-			'123456789',
+			`123456789`,
 			'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
 			'bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb'
 		];
