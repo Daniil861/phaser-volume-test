@@ -8,6 +8,7 @@ class PrivacyScene extends Phaser.Scene {
 		}
 	}
 	create() {
+		console.log('Загрузился PrivacyScene');
 		this.content = [
 			['PRIVACY POLICY'],
 			['LAST MODIFIED 1 MARCH 2021'],
@@ -100,32 +101,41 @@ class PrivacyScene extends Phaser.Scene {
 			wordWrap: { width: config.width - 250 }
 		});
 
-		let minY = config.height - text.height - 20;
+		// let minY = config.height - text.height - 20;
 
-		if (text.height <= config.height - 20) {
+		// if (text.height <= config.height - 20) {
 
-			minY = this.config.y + 20;
+		// 	minY = this.config.y + 20;
 
-		}
+		// }
 		text.setMask(mask);
 
 		let zone = this.add.zone(this.config.x, this.config.y, config.width - 250, config.height)
 			.setOrigin(0)
-			.setInteractive({ useHandCursor: true, draggable: true });
-		this.input.dragDistanceThreshold = 100;
+			.setInteractive();
+		// this.input.dragDistanceThreshold = 100;
 
-		let y = this.config.y;
+		// let y = this.config.y;
 
-		zone.on('drag', function (pointer) {
+		// zone.on('drag', function (pointer) {
+		// 	if (pointer.isDown) {
+		// 		text.y += pointer.velocity.y / 5;
+		// 		text.y = Phaser.Math.Clamp(text.y, minY, y + 20);
+		// 	}
+		// })
+		// 	.on('dragend', () => {
+		// 		zone.x = this.config.x;
+		// 		zone.y = this.config.y - 3;
+		// 	});
+		zone.on('pointermove', function (pointer) {
+
 			if (pointer.isDown) {
-				text.y += pointer.velocity.y / 5;
-				text.y = Phaser.Math.Clamp(text.y, minY, y + 20);
+				text.y += (pointer.velocity.y / 10);
+
+				text.y = Phaser.Math.Clamp(text.y, -400, 300);
 			}
-		})
-			.on('dragend', () => {
-				zone.x = this.config.x;
-				zone.y = this.config.y - 3;
-			});
+
+		});
 	}
 	createButton() {
 		let btn = this.add.sprite(config.scale.width - 100, config.scale.height - 100, 'btn-preload').setInteractive();
