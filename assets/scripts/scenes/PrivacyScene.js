@@ -105,6 +105,10 @@ class PrivacyScene extends Phaser.Scene {
 			color: '#fff',
 // 			wordWrap: { width: config.width - 250 }
 		});
+		 this.newText = this.add.text(50, 100, 'Обычный тестовый текст', {
+			 font: '26px Inter-bold',
+			 color: '#fff'
+		 })
 
 		// let minY = config.height - text.height - 20;
 
