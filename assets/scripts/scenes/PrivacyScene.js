@@ -110,7 +110,7 @@ class PrivacyScene extends Phaser.Scene {
 			 color: '#fff'
 		 })
 		
-		this.newSecondText = this.add.text(50, 300, this.content[2], {
+		this.newSecondText = this.add.text(50, 300, this.content, {
 			 font: '26px Inter-bold',
 			 color: '#fff'
 		 })
