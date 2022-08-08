@@ -98,13 +98,13 @@ class PrivacyScene extends Phaser.Scene {
 		graphics.fillRect(this.config.x + 90, this.config.y + 20, config.width, config.height);
 		// this.graphics.fillRect(60, 60, 100, 100);
 
-		let mask = new Phaser.Display.Masks.GeometryMask(this, graphics);
+// 		let mask = new Phaser.Display.Masks.GeometryMask(this, graphics);
 
-		let text = this.add.text(this.config.x + 90, this.config.y + 20, this.content, {
-			font: '26px Inter-bold',
-			color: '#fff',
-			wordWrap: { width: config.width - 250 }
-		});
+// 		let text = this.add.text(this.config.x + 90, this.config.y + 20, this.content, {
+// 			font: '26px Inter-bold',
+// 			color: '#fff',
+// 			wordWrap: { width: config.width - 250 }
+// 		});
 
 		// let minY = config.height - text.height - 20;
 
@@ -113,11 +113,11 @@ class PrivacyScene extends Phaser.Scene {
 		// 	minY = this.config.y + 20;
 
 		// }
-		text.setMask(mask);
+// 		text.setMask(mask);
 
-		let zone = this.add.zone(this.config.x, this.config.y, config.width - 250, config.height)
-			.setOrigin(0)
-			.setInteractive();
+// 		let zone = this.add.zone(this.config.x, this.config.y, config.width - 250, config.height)
+// 			.setOrigin(0)
+// 			.setInteractive();
 
 		// this.input.dragDistanceThreshold = 100;
 
@@ -133,15 +133,15 @@ class PrivacyScene extends Phaser.Scene {
 		// 		zone.x = this.config.x;
 		// 		zone.y = this.config.y - 3;
 		// 	});
-		zone.on('pointermove', function (pointer) {
+// 		zone.on('pointermove', function (pointer) {
 
-			if (pointer.isDown) {
-				text.y += (pointer.velocity.y / 10);
+// 			if (pointer.isDown) {
+// 				text.y += (pointer.velocity.y / 10);
 
-				text.y = Phaser.Math.Clamp(text.y, -400, 300);
-			}
+// 				text.y = Phaser.Math.Clamp(text.y, -400, 300);
+// 			}
 
-		});
+// 		});
 	}
 	createButton() {
 		let btn = this.add.sprite(config.scale.width - 100, config.scale.height - 100, 'btn-preload').setInteractive();
