@@ -100,12 +100,17 @@ class PrivacyScene extends Phaser.Scene {
 
 // 		let mask = new Phaser.Display.Masks.GeometryMask(this, graphics);
 
-		let text = this.add.text(this.config.x + 90, this.config.y + 20, this.content, {
+		this.firstText = this.add.text(this.config.x + 90, this.config.y + 20, this.content, {
 			font: '26px Inter-bold',
 			color: '#fff',
 // 			wordWrap: { width: config.width - 250 }
 		});
 		 this.newText = this.add.text(50, 100, 'Обычный тестовый текст', {
+			 font: '26px Inter-bold',
+			 color: '#fff'
+		 })
+		
+		this.newSecondText = this.add.text(50, 300, this.content[2], {
 			 font: '26px Inter-bold',
 			 color: '#fff'
 		 })
