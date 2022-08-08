@@ -88,10 +88,15 @@ class PrivacyScene extends Phaser.Scene {
 	createBackground() {
 		this.add.sprite(0, 0, 'bg').setOrigin(0);
 	}
-	createTextBlock() {
-		let graphics = this.make.graphics();
+	createRect() {
 
+	}
+	createTextBlock() {
+		// this.graphics = this.make.graphics();
+		let graphics = this.add.graphics();
+		// this.graphics.fillStyle(0xffffff);
 		graphics.fillRect(this.config.x + 90, this.config.y + 20, config.width, config.height);
+		// this.graphics.fillRect(60, 60, 100, 100);
 
 		let mask = new Phaser.Display.Masks.GeometryMask(this, graphics);
 
@@ -113,6 +118,7 @@ class PrivacyScene extends Phaser.Scene {
 		let zone = this.add.zone(this.config.x, this.config.y, config.width - 250, config.height)
 			.setOrigin(0)
 			.setInteractive();
+
 		// this.input.dragDistanceThreshold = 100;
 
 		// let y = this.config.y;
