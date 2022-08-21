@@ -28,11 +28,18 @@ function create() {
 	this.sound.pauseOnBlur = false;
 	console.log(this);
 
-
-	var music = this.sound.add('dafunk');
-	console.log(music);
 	this.input.on('pointerdown', function () {
-		music.play();
+		this.sound.unlock();
+		var music = this.sound.add('dafunk');
+		console.log(music);
+		if (!this.sound.locked) {
+			music.play();
+		}
+		else {  // IF Not wait on unlock event 
+			this.sound.once(Phaser.Sound.Events.UNLOCKED, () => {
+				music.play();
+			})
+		}
 		console.log(music);
 	}, this)
 
